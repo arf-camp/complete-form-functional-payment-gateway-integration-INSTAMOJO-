@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
 		$_SESSION['USER_ID']=$row['id'];
 		$_SESSION['USER_EMAIL']=$row['email'];
 		$_SESSION['USER_MOBILE']=$row['mobile'];
+      $_SESSION['USER_NAME']=$row['name'];
 		header('location:dashboard.php');
 		die();
 	}else{

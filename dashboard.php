@@ -29,8 +29,8 @@ if(isset($_POST['submit'])){
 	$payload = Array(
 		'purpose' => 'Buying Food',
 		'amount' => $amount,
-		'phone' => $row['mobile'],
-		'buyer_name' => $row['name'],
+		'phone' => $_SESSION['USER_MOBILE'],
+		'buyer_name' =>$_SESSION['USER_NAME'],
 		'redirect_url' => 'http://localhost/PHPPaymentInstamojo/redirect.php',  //give server address
 		'send_email' => false,
 		'send_sms' => false,
